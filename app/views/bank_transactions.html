@@ -1,0 +1,21 @@
+<table class='table table-striped'>
+	<h1>List all Bank Transactions</h1>
+	<tr>
+		<td>id</td>	
+		<td>deposit</td>	
+		<td>bank account</td>	
+		<td>currency</td>	
+		<td>cash amount</td>	
+		<td>created at</td>	
+	</tr>
+	<hr/>
+	<tr ng-repeat='bankTx in bankTransactions'>
+		<td>{{ bankTx.id }}</td>
+		<td>{{ bankTx.deposit }}</td>
+		<td>{{ bankTx.bankAccountId }}</td>
+		<td>{{ bankTx.currency }}</td>
+		<td>{{ bankTx.cashAmount }}</td>
+		<td>{{ bankTx.createdAt }}</td>
+	<tr>
+</table>
+

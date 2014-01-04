@@ -1,0 +1,14 @@
+<div class='span3' style='max-width:400px'>
+<h2>Login to the Gateway</h2>
+<form role='form' ng-submit="login()">
+  <div class='form-group'>
+		<label name='name'>name: </label>
+		<input class='form-control' ng-model='user.name' type='text' name='name'/>
+  </div>
+  <p>
+		<label name='password'>password: </label>
+		<input class='form-control' type='password' name='password' ng-model='user.password'/>
+  </p>
+  <input class="btn btn-positive btn-default" type='submit'/>
+</form>
+</div>

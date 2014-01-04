@@ -1,0 +1,40 @@
+<div class='row'>
+	<div class='col-md-6'>
+		<h2>List all Users</h2>
+		<table class='table table-striped'>
+		 <tr>
+				<td>id</td>	
+				<td>name</td>	
+				<td>ripple address</td>
+				<td>created at</td>	
+			</tr>
+			<hr/>
+			<tr ng-repeat='user in users'>
+				<td>{{ user.id }}</td>
+				<td>{{ user.name }}</td>
+				<td>{{ user.rippleAddress }}</td>
+				<td>{{ user.createdAt }}</td>
+			<tr>
+		</table>
+	</div>
+	<div  class='col-md-6'> 
+		<h2>Create a User</h2>
+		<form role='form' ng-submit="submit()">
+			<div class='form-group'>
+				<label name='name'>name: </label>
+				<input class='form-control' ng-model='user.name' type='text' name='name'/>
+			</div>
+			<div class='form-group'>
+				<label name='name'>ripple address: </label>
+				<input class='form-control' ng-model='user.rippleAddress' type='text' name='rippleAddress'/>
+			</div>
+			<p>
+				<label name='password'>password: </label>
+				<input class='form-control' type='password' name='password' ng-model='user.password'/>
+				<label name='password'>confirm password: </label>
+				<input class='form-control' type='password' name='password_confirmation' ng-model='user.password_confirmation'/>
+			</p>
+			<input class="btn btn-positive btn-default" type='submit'/>
+		</form>
+	</div>
+</div>

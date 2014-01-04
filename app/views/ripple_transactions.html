@@ -1,0 +1,72 @@
+<div class'row'>
+	<div class='col-md-9'>
+		<table class='table table-striped'>
+			<h1>List all Ripple Transactions</h1>
+			<tr>
+				<td>id</td>	
+				<td>issuance</td>	
+				<td>destination tag</td>	
+				<td>balance id</td>	
+				<td>to amount</td>	
+				<td>to currency</td>	
+			</tr>
+			<hr/>
+			<tr ng-repeat='rippleTx in rippleTransactions'>
+				<td>{{ rippleTx.id }}</td>
+				<td>{{ rippleTx.issuance }}</td>
+				<td>{{ rippleTx.destinationTag }}</td>
+				<td>{{ rippleTx.balanceId }}</td>
+				<td>{{ rippleTx.toAmount }}</td>
+				<td>{{ rippleTx.toCurrency }}</td>
+			<tr>
+		</table>
+	</div>
+
+  <div class='col-md-3'>
+		<h3>Create Ripple Transaction</h3>
+		<p>Eventually this should never be done by hand</p>
+
+    <form role='form' ng-submit='create()'>
+			<div class='form-group'>
+				<label name='currency'>to currency:</label>
+				<input class='form-control' ng-model='rippleTransaction.toCurrency'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>to amount:</label>
+				<input ng-model='rippleTransaction.toAmount' class='form-control'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>from currency:</label>
+				<input class='form-control' ng-model='rippleTransaction.fromCurrency'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>from amount:</label>
+				<input class='form-control' ng-model='rippleTransaction.fromAmount'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>destination tag:</label>
+				<input ng-model='rippleTransaction.destinationTag' class='form-control'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>transaction state:</label>
+				<input ng-model='rippleTransaction.txState' class='form-control'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>transaction hash:</label>
+				<input ng-model='rippleTransaction.txHash' class='form-control'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>to address:</label>
+				<input ng-model='rippleTransaction.toAddress' class='form-control'/>
+			</div>
+			<div class='form-group'>
+				<label name='currency'>from address:</label>
+				<input ng-model='rippleTransaction.fromAddress' class='form-control'/>
+			</div>
+			<div class='form-group'>
+				<input type='submit' class='btn btn-positive btn-default pull-right'/>
+			</div>
+			</div>
+ 		</form>
+  </div>
+</div>

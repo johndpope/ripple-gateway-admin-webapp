@@ -1,0 +1,217 @@
+<div class="row" style='padding:0em 1em 1em 1em'>
+
+<div><h1 class="page-header">REST API Reference</h1>
+
+  <h2>
+    <a>
+      Users
+    </a><br>
+    <small>A user can register or an admin can list/create users</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a>GET /api/v1/users</a></td>
+            <td width="60%">List all users at this gateway.</td>
+          </tr>
+          <tr>
+            <td><a>POST /api/v1/users</a></td>
+            <td width="60%">Create a new user at this gateway.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/accounts.html">
+      Balances
+    </a><br>
+    <small>Resource to check on user balances in various currencies with the gateway</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href="">GET /api/v1/balances</a></td>
+            <td width="60%">Get a list of all balances for all users</td>
+          </tr>
+          <tr>
+            <td><a href="">GET /api/v1/users/:userId/balances</a></td>
+            <td width="60%">Get the user's current balances at the gateway</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/buttons.html">
+      Bank Accounts
+    </a><br>
+    <small>Create payment buttons, pages, and iFrames to accept bitcoin on your website.</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/buttons/create.html">POST /api/v1/buttons</a></td>
+            <td width="60%">Create a new payment button, page, or iFrame.</td>
+          </tr>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/buttons/create_order.html">POST /api/v1/buttons/:code/create_order</a></td>
+            <td width="60%">Create an order for this button.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/buys.html">
+      Ripple Addresses
+    </a><br>
+    <small>List Ripple Addresses related to User accounts.</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/buys/create.html">POST /api/v1/buys</a></td>
+            <td width="60%">Purchase bitcoin by debiting your U.S. bank account.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/contacts.html">
+      Ripple Transactions
+    </a><br>
+    <small>List transactions made on ripple network to the gateway's address.</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/contacts/index.html">GET /api/v1/ripple_transactions</a></td>
+            <td width="60%">Get all rippple transactions<td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/currencies.html">
+      Bank Transactions
+    </a><br>
+    <small>List bank transactions made at this gateway</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href="">GET /api/v1/bank_transactions</a></td>
+            <td width="60%">Show all bank transactions</td>
+          </tr>
+          <tr>
+            <td><a href="">GET /api/v1/currencies/exchange_rates</a></td>
+            <td width="60%">Show exchange rates between BTC and other currencies.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/orders.html">
+      Sessions
+    </a><br>
+    <small>List merchant orders received.</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/orders/index.html">GET /api/v1/session</a></td>
+            <td width="60%">Get the currently authenticated user's session.</td>
+          </tr>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/orders/show.html">POST /api/v1/session</a></td>
+            <td width="60%">Create a session / sign in.</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/prices.html">
+      Withdrawals
+    </a><br>
+    <small>List Bank Transaction Withdrawals</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/prices/buy.html">GET /api/v1/withdrawals</a></td>
+            <td width="60%">List all withdrawals</td>
+          </tr>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/prices/sell.html">GET /api/v1/users/:userId/withdrawals</a></td>
+            <td width="60%">Get a list of a single user's withdrawals.</td>
+          </tr>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/prices/spot_rate.html">POST /api/v1/withdrawals</a></td>
+            <td width="60%">As an admin create a withdrawal</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href="https://coinbase.com/api/doc/1.0/recurring_payments.html">
+      Deposits
+    </a><br>
+    <small>List Bank Transaction Deposits</small>
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td><a>GET /api/v1/deposits</a></td>
+            <td width="60%">List all deposits.</td>
+          </tr>
+          <tr>
+            <td><a href="https://coinbase.com/api/doc/1.0/recurring_payments/show.html">GET /api/v1/users/:userId/deposits</a></td>
+            <td width="60%">Show an individual user's deposits.</td>
+          </tr>
+    </tbody>
+  </table>
+  </div>
